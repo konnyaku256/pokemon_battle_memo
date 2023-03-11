@@ -1,0 +1,19 @@
+{
+  "@@locale": "ja",
+  "app_name": "バトメモ（Pokemon Battle Memo）",
+  "app_name_short": "バトメモ",
+  "notification": "お知らせ",
+  "terrace_type": "テラスタイプ",
+  "ability": "特性",
+  "item": "持ち物",
+  "moves": "技構成",
+  "enemy_party": "相手パーティ",
+  "how_to_use": "使い方",
+  "settings": "設定",
+  "language": "言語",
+  "dark_mode": "ダークモード",
+  "github": "GitHub",
+  "contact": "お問い合わせ",
+  "privacy_policy": "プライバシーポリシー",
+  "terms_of_service": "利用規約"
+}
