@@ -38,10 +38,15 @@ List<PokemonListTileData> newPokemonListTileDataList() {
 String types2String(BuiltList<GReadPokemonData_pokemon_types>? types) {
   if (types?.length == 1) {
     return translate('type.csv', 'en', '${types?[0].type?.name}', 'ja');
+  } else if (types?.length == 2) {
+    return '${translate('type.csv', 'en', '${types?[0].type?.name}', 'ja')} / ${translate('type.csv', 'en', '${types?[1].type?.name}', 'ja')}';
   }
-  return '${translate('type.csv', 'en', '${types?[0].type?.name}', 'ja')} / ${translate('type.csv', 'en', '${types?[1].type?.name}', 'ja')}';
+  return '';
 }
 
 String stats2String(BuiltList<GReadPokemonData_pokemon_stats>? stats) {
-  return 'H${stats?[0].base_stat} A${stats?[1].base_stat} B${stats?[2].base_stat} C${stats?[3].base_stat} D${stats?[4].base_stat} S${stats?[5].base_stat} ';
+  if (stats?.length == 6) {
+    return 'H${stats?[0].base_stat} A${stats?[1].base_stat} B${stats?[2].base_stat} C${stats?[3].base_stat} D${stats?[4].base_stat} S${stats?[5].base_stat} ';
+  }
+  return '';
 }
