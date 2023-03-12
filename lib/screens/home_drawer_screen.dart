@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pokemon_battle_memo/library/l10n.dart';
+import 'package:pokemon_battle_memo/screens/howtouse_screen.dart';
 import 'package:pokemon_battle_memo/screens/settings_screen.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -24,7 +25,11 @@ class HomeDrawerScreen extends HookWidget {
           ListTile(
             leading: const Icon(Icons.help),
             title: Text(l10n(context).how_to_use),
-            // subtitle: DescriptionText(l10n(context).diary_list_description),
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => HowToUseScreen(),
+              ));
+            },
           ),
           ListTile(
             leading: const Icon(Icons.settings_rounded),

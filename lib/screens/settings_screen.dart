@@ -56,7 +56,7 @@ class SettingsScreen extends HookWidget {
                   icon: const Icon(Icons.info),
                   applicationName: packageInfo.appName,
                   applicationVersion: packageInfo.version,
-                  // applicationIcon: Image.asset("assets/icon.png", width: 50),
+                  applicationIcon: Image.asset("assets/icon.png", width: 50),
                   applicationLegalese: "\u00A9 2023 konnyaku256",
                 ),
               ],
