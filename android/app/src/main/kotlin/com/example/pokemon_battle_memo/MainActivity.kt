@@ -1,4 +1,4 @@
-package com.example.pokemon_battle_memo
+package com.konnyaku256.pokemon_battle_memo
 
 import io.flutter.embedding.android.FlutterActivity
 

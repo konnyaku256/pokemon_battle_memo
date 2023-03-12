@@ -57,6 +57,7 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^2.0.0
   flutter_flavorizr: ^2.0.0 # json_serializable のためバージョン固定
+  flutter_launcher_icons:
 
   json_serializable: ^4.1.4 # ferry_generator との依存関係のためバージョン固定
 
@@ -83,6 +84,14 @@ flutter:
 
   # 自動生成の有効化
   generate: true
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path_ios: "assets/icon.png"
+  image_path_android: "assets/icon.png"
+  adaptive_icon_foreground: "assets/icon-adaptive.png"
+  adaptive_icon_background: "#ffffff"
 
 # Flavor 自動生成用の設定
 flavorizr:
