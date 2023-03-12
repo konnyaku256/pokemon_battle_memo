@@ -41,6 +41,14 @@ class HomeDrawerScreen extends HookWidget {
             },
           ),
           ListTile(
+            leading: const Icon(Icons.newspaper),
+            title: Text(l10n(context).twitter),
+            onTap: () async {
+              await launchUrl(Uri.parse('https://twitter.com/pk_battle_memo'),
+                  mode: LaunchMode.externalApplication);
+            },
+          ),
+          ListTile(
             leading: const Icon(Icons.code),
             title: Text(l10n(context).github),
             onTap: () async {
