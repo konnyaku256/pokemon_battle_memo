@@ -27,6 +27,12 @@ class PokemonListTileState extends State<PokemonListTile> {
     });
   }
 
+  void updateItemName(String itemName) {
+    setState(() {
+      pokemonData.itemName = itemName;
+    });
+  }
+
   @override
   void initState() {
     super.initState();
@@ -42,7 +48,8 @@ class PokemonListTileState extends State<PokemonListTile> {
             pokemonData?.sprites?.front_default ?? '',
             pokemonData?.name ?? '',
             types2String(pokemonData?.types),
-            stats2String(pokemonData?.stats));
+            stats2String(pokemonData?.stats),
+            pokemon.item);
         updatePokemonData(pokemonListTileData);
       }
     });
@@ -78,11 +85,13 @@ class PokemonListTileState extends State<PokemonListTile> {
               subtitle: Text(pokemonData.stat,
                   style: const TextStyle(
                       fontSize: 14, fontWeight: FontWeight.normal)),
-              trailing: const CircleAvatar(
+              trailing: CircleAvatar(
                   radius: 14,
                   backgroundColor: Colors.white,
                   backgroundImage: NetworkImage(
-                      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/oran-berry.png')),
+                      'https://www.serebii.net/itemdex/sprites/sv/${pokemonData.itemName}.png')),
+              // backgroundImage: NetworkImage(
+              //     'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/oran-berry.png')),
             ))));
   }
 }

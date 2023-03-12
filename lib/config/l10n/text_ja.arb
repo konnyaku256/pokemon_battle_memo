@@ -11,6 +11,7 @@
   "how_to_use": "使い方",
   "settings": "設定",
   "language": "言語",
+  "language_description": "現在、日本語にのみ対応しています",
   "dark_mode": "ダークモード",
   "github": "GitHub",
   "contact": "お問い合わせ",

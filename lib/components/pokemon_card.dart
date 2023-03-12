@@ -54,13 +54,54 @@ class PokemonCard extends HookWidget {
           pokemonData?.sprites?.front_default ?? '',
           pokemonData?.name ?? '',
           types2String(pokemonData?.types),
-          stats2String(pokemonData?.stats));
+          stats2String(pokemonData?.stats),
+          pokemon.value.item);
       pokemonListTileKey.currentState?.updatePokemonData(pokemonListTileData);
     }
 
     Future<void> selectPokemon(String pokemonName) async {
       final res = await readPokemon(pokemonName);
       setPokemonData(res?.data?.pokemon);
+    }
+
+    Future<void> selectTerraceType(String terraceType) async {
+      pokemon.value.terraceType = terraceType;
+      await setTmpPokemonBattleMemoJSON(
+          pokemonListIndex, json.encode(pokemon.value.toJson()));
+    }
+
+    Future<void> selectAbility(String ability) async {
+      pokemon.value.ability = ability;
+      await setTmpPokemonBattleMemoJSON(
+          pokemonListIndex, json.encode(pokemon.value.toJson()));
+    }
+
+    Future<void> selectItem(String item) async {
+      pokemon.value.item = item;
+      await setTmpPokemonBattleMemoJSON(
+          pokemonListIndex, json.encode(pokemon.value.toJson()));
+
+      // PokemonListTileのデータを更新
+      pokemonListTileKey.currentState?.updateItemName(item);
+    }
+
+    Future<void> setMove(int moveNumber, String move) async {
+      switch (moveNumber) {
+        case 1:
+          pokemon.value.move1 = move;
+          break;
+        case 2:
+          pokemon.value.move2 = move;
+          break;
+        case 3:
+          pokemon.value.move3 = move;
+          break;
+        case 4:
+          pokemon.value.move4 = move;
+          break;
+      }
+      await setTmpPokemonBattleMemoJSON(
+          pokemonListIndex, json.encode(pokemon.value.toJson()));
     }
 
     return Card(
@@ -89,8 +130,9 @@ class PokemonCard extends HookWidget {
                           style: const TextStyle(
                               fontSize: 16, fontWeight: FontWeight.bold),
                           decoration: const InputDecoration(
-                            contentPadding: EdgeInsets.all(0),
-                            border: OutlineInputBorder(),
+                            contentPadding:
+                                EdgeInsets.only(top: 10, bottom: 10),
+                            border: UnderlineInputBorder(),
                             hintText: '？？？',
                           ),
                           onSubmitted: (value) async {
@@ -113,20 +155,23 @@ class PokemonCard extends HookWidget {
                             fontSize: 14, fontWeight: FontWeight.normal)),
                     trailing: SizedBox(
                         height: 16,
-                        width: 100,
+                        width: 150,
                         child: TextField(
                           controller: TextEditingController(
                               text: translate('type.csv', 'en',
                                   pokemon.value.terraceType, 'ja')),
+                          textAlign: TextAlign.right,
                           style: const TextStyle(
                               fontSize: 14, fontWeight: FontWeight.normal),
                           decoration: const InputDecoration(
-                            contentPadding: EdgeInsets.all(0),
-                            border: OutlineInputBorder(),
+                            contentPadding:
+                                EdgeInsets.only(top: 10, bottom: 10),
+                            border: UnderlineInputBorder(),
                             hintText: '？？？',
                           ),
                           onSubmitted: (value) async {
-                            // TODO
+                            await selectTerraceType(
+                                translate('type.csv', 'ja', value, 'en'));
                           },
                         )),
                   ),
@@ -140,20 +185,23 @@ class PokemonCard extends HookWidget {
                             fontSize: 14, fontWeight: FontWeight.normal)),
                     trailing: SizedBox(
                         height: 16,
-                        width: 100,
+                        width: 150,
                         child: TextField(
                           controller: TextEditingController(
                               text: translate('ability.csv', 'en',
                                   pokemon.value.ability, 'ja')),
+                          textAlign: TextAlign.right,
                           style: const TextStyle(
                               fontSize: 14, fontWeight: FontWeight.normal),
                           decoration: const InputDecoration(
-                            contentPadding: EdgeInsets.all(0),
-                            border: OutlineInputBorder(),
+                            contentPadding:
+                                EdgeInsets.only(top: 10, bottom: 10),
+                            border: UnderlineInputBorder(),
                             hintText: '？？？',
                           ),
                           onSubmitted: (value) async {
-                            // TODO
+                            await selectAbility(
+                                translate('ability.csv', 'ja', value, 'en'));
                           },
                         )),
                   ),
@@ -167,20 +215,23 @@ class PokemonCard extends HookWidget {
                             fontSize: 14, fontWeight: FontWeight.normal)),
                     trailing: SizedBox(
                         height: 16,
-                        width: 100,
+                        width: 150,
                         child: TextField(
                           controller: TextEditingController(
                               text: translate(
                                   'item.csv', 'en', pokemon.value.item, 'ja')),
+                          textAlign: TextAlign.right,
                           style: const TextStyle(
                               fontSize: 14, fontWeight: FontWeight.normal),
                           decoration: const InputDecoration(
-                            contentPadding: EdgeInsets.all(0),
-                            border: OutlineInputBorder(),
+                            contentPadding:
+                                EdgeInsets.only(top: 10, bottom: 10),
+                            border: UnderlineInputBorder(),
                             hintText: '？？？',
                           ),
                           onSubmitted: (value) async {
-                            // TODO
+                            await selectItem(
+                                translate('item.csv', 'ja', value, 'en'));
                           },
                         )),
                   ),
@@ -190,17 +241,25 @@ class PokemonCard extends HookWidget {
                           fontSize: 14, fontWeight: FontWeight.normal)),
                   const Divider(color: Colors.black),
                   MoveListTile(
-                      moveName: translate(
-                          'move.csv', 'en', pokemon.value.move1, 'ja')),
+                    pokemonListIndex: pokemonListIndex,
+                    moveNumber: 1,
+                    setMove: setMove,
+                  ),
                   MoveListTile(
-                      moveName: translate(
-                          'move.csv', 'en', pokemon.value.move2, 'ja')),
+                    pokemonListIndex: pokemonListIndex,
+                    moveNumber: 2,
+                    setMove: setMove,
+                  ),
                   MoveListTile(
-                      moveName: translate(
-                          'move.csv', 'en', pokemon.value.move3, 'ja')),
+                    pokemonListIndex: pokemonListIndex,
+                    moveNumber: 3,
+                    setMove: setMove,
+                  ),
                   MoveListTile(
-                      moveName: translate(
-                          'move.csv', 'en', pokemon.value.move4, 'ja')),
+                    pokemonListIndex: pokemonListIndex,
+                    moveNumber: 4,
+                    setMove: setMove,
+                  ),
                 ])));
   }
 }

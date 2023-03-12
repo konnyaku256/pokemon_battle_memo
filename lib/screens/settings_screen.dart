@@ -34,16 +34,12 @@ class SettingsScreen extends HookWidget {
             margin: const EdgeInsets.all(20),
             child: Column(
               children: [
-                SwitchListTile(
-                  activeColor: const Color(myPrimaryColorValue),
+                ListTile(
+                  leading: const Icon(Icons.translate),
                   title: Text(l10n(context).language),
-                  value: isDarkMode.value,
-                  onChanged: (bool value) {
-                    Provider.of<MyBrightnessNotifier>(context, listen: false)
-                        .toggleBrightness();
-                    isDarkMode.value = value;
-                  },
-                  secondary: const Icon(Icons.translate),
+                  subtitle: Text(l10n(context).language_description,
+                      style: const TextStyle(
+                          fontSize: 14, fontWeight: FontWeight.normal)),
                 ),
                 SwitchListTile(
                   activeColor: const Color(myPrimaryColorValue),

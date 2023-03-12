@@ -4,19 +4,21 @@ import 'package:pokemon_battle_memo/graphql/read_pokemon.data.gql.dart';
 import 'package:pokemon_battle_memo/library/translate.dart';
 
 class PokemonListTileData {
-  PokemonListTileData(this.sprite, this.name, this.type, this.stat);
+  PokemonListTileData(
+      this.sprite, this.name, this.type, this.stat, this.itemName);
 
   String sprite;
   String name;
   String type;
   String stat;
+  String itemName;
 }
 
 PokemonListTileData newPokemonListTileData() {
   const defaultSprite =
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png";
   const defaultName = '？？？';
-  return PokemonListTileData(defaultSprite, defaultName, '', '');
+  return PokemonListTileData(defaultSprite, defaultName, '', '', '');
 }
 
 List<PokemonListTileData> newPokemonListTileDataList() {
@@ -24,12 +26,12 @@ List<PokemonListTileData> newPokemonListTileDataList() {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png";
   const defaultName = '？？？';
   return List<PokemonListTileData>.from([
-    PokemonListTileData(defaultSprite, defaultName, '', ''),
-    PokemonListTileData(defaultSprite, defaultName, '', ''),
-    PokemonListTileData(defaultSprite, defaultName, '', ''),
-    PokemonListTileData(defaultSprite, defaultName, '', ''),
-    PokemonListTileData(defaultSprite, defaultName, '', ''),
-    PokemonListTileData(defaultSprite, defaultName, '', '')
+    PokemonListTileData(defaultSprite, defaultName, '', '', ''),
+    PokemonListTileData(defaultSprite, defaultName, '', '', ''),
+    PokemonListTileData(defaultSprite, defaultName, '', '', ''),
+    PokemonListTileData(defaultSprite, defaultName, '', '', ''),
+    PokemonListTileData(defaultSprite, defaultName, '', '', ''),
+    PokemonListTileData(defaultSprite, defaultName, '', '', '')
   ]);
 }
 

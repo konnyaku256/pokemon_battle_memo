@@ -15,6 +15,7 @@ class PokemonBattleMemo extends HookWidget {
       create: (_) => MyBrightnessNotifier(),
       child: Consumer<MyBrightnessNotifier>(builder: (context, brightness, _) {
         return MaterialApp(
+            // debugShowCheckedModeBanner: false, // デバッグラベルの表示フラグ
             localizationsDelegates: const [
               AppLocalizations.delegate,
               GlobalMaterialLocalizations.delegate,

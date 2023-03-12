@@ -37,3 +37,7 @@ samples, guidance on mobile development, and a full API reference.
   - [https://wiki.ポケモン.com/wiki/アイテムの外国語名一覧
     ナビゲーションに移動検索に移動
     ](https://wiki.xn--rckteqa2e.com/wiki/%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0%E3%81%AE%E5%A4%96%E5%9B%BD%E8%AA%9E%E5%90%8D%E4%B8%80%E8%A6%A7)
+
+## 持ち物の画像
+
+- https://www.serebii.net
