@@ -2,5 +2,5 @@
 
 FLUTTER_TARGET=lib/main_production.dart
 ASSET_PREFIX=production
-BUNDLE_NAME=バトメモ
-BUNDLE_DISPLAY_NAME=バトメモ
+BUNDLE_NAME=ばとめも
+BUNDLE_DISPLAY_NAME=ばとめも

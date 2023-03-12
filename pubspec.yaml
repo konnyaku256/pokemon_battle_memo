@@ -103,14 +103,14 @@ flavorizr:
   flavors:
     development:
       app:
-        name: "バトメモ（dev）"
+        name: "ばとめも（dev）"
       android:
         applicationId: "com.konnyaku256.pokemon_battle_memo.dev"
       ios:
         bundleId: "com.konnyaku256.pokemon_battle_memo.dev"
     production:
       app:
-        name: "バトメモ"
+        name: "ばとめも"
       android:
         applicationId: "com.konnyaku256.pokemon_battle_memo"
       ios:

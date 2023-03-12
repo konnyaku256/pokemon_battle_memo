@@ -6,14 +6,12 @@ enum Flavor {
 class F {
   static Flavor? appFlavor;
 
-  static String get name => appFlavor?.name ?? '';
-
   static String get title {
     switch (appFlavor) {
       case Flavor.DEVELOPMENT:
-        return 'バトメモ（dev）';
+        return 'ばとめも（dev）';
       case Flavor.PRODUCTION:
-        return 'バトメモ';
+        return 'ばとめも';
       default:
         return 'title';
     }

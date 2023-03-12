@@ -1,6 +1,6 @@
 #include "Generated.xcconfig"
 
-FLUTTER_TARGET=lib/main_development.dart
+FLUTTER_TARGET=lib/main-development.dart
+
 ASSET_PREFIX=development
-BUNDLE_NAME=バトメモ（dev）
-BUNDLE_DISPLAY_NAME=バトメモ（dev）
+BUNDLE_NAME=ばとめも（dev）

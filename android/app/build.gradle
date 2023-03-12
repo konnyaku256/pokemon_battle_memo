@@ -34,12 +34,12 @@ android {
         development {
             dimension "flavor-type"
             applicationId "com.konnyaku256.pokemon_battle_memo.dev"
-            resValue "string", "app_name", "バトメモ（dev）"
+            resValue "string", "app_name", "ばとめも（dev）"
         }
         production {
             dimension "flavor-type"
             applicationId "com.konnyaku256.pokemon_battle_memo"
-            resValue "string", "app_name", "バトメモ"
+            resValue "string", "app_name", "ばとめも"
         }
     }
 
@@ -89,3 +89,6 @@ flutter {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
+
+
+

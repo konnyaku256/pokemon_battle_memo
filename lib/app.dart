@@ -30,7 +30,7 @@ class PokemonBattleMemo extends HookWidget {
               brightness: brightness.currentBrightness,
               primarySwatch: myMaterialColorTheme,
             ),
-            title: 'バトメモ',
+            title: 'ばとめも',
             home: const HomeScreen());
       }),
     );
