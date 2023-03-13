@@ -990,6 +990,7 @@
 			baseConfigurationReference = 24F25FD859BC0CC04786628D /* Pods-Runner.debug-development.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = HSCKTX2FNM;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.konnyaku256.pokemon-battle-memo.dev";
 				PRODUCT_NAME = Runner;
 			};
 			name = "Debug-development";
@@ -999,6 +1000,7 @@
 			baseConfigurationReference = B40DB2413DAAA2DE51B27001 /* Pods-Runner.profile-development.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = HSCKTX2FNM;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.konnyaku256.pokemon-battle-memo.dev";
 				PRODUCT_NAME = Runner;
 			};
 			name = "Profile-development";
@@ -1008,6 +1010,7 @@
 			baseConfigurationReference = 9F8180720636F5C6D76AE163 /* Pods-Runner.release-development.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = HSCKTX2FNM;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.konnyaku256.pokemon-battle-memo.dev";
 				PRODUCT_NAME = Runner;
 			};
 			name = "Release-development";
@@ -1017,6 +1020,7 @@
 			baseConfigurationReference = A1DF4A19BA6532FE4559ED0B /* Pods-Runner.debug-production.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = HSCKTX2FNM;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.konnyaku256.pokemon-battle-memo";
 				PRODUCT_NAME = Runner;
 			};
 			name = "Debug-production";
@@ -1026,6 +1030,7 @@
 			baseConfigurationReference = 9DAF2FB77C6D7CA2FA5B3686 /* Pods-Runner.profile-production.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = HSCKTX2FNM;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.konnyaku256.pokemon-battle-memo";
 				PRODUCT_NAME = Runner;
 			};
 			name = "Profile-production";
@@ -1035,6 +1040,7 @@
 			baseConfigurationReference = 868D6E620B887013B329F800 /* Pods-Runner.release-production.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = HSCKTX2FNM;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.konnyaku256.pokemon-battle-memo";
 				PRODUCT_NAME = Runner;
 			};
 			name = "Release-production";
