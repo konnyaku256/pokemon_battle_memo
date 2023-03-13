@@ -21,3 +21,4 @@ doc/api/
 *.js.map
 
 certificates/
+android/key.properties
