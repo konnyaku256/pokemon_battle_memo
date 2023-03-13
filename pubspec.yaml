@@ -107,11 +107,11 @@ flavorizr:
       android:
         applicationId: "com.konnyaku256.pokemon_battle_memo.dev"
       ios:
-        bundleId: "com.konnyaku256.pokemon_battle_memo.dev"
+        bundleId: "com.konnyaku256.pokemon-battle-memo.dev"
     production:
       app:
         name: "ばとめも"
       android:
         applicationId: "com.konnyaku256.pokemon_battle_memo"
       ios:
-        bundleId: "com.konnyaku256.pokemon_battle_memo"
+        bundleId: "com.konnyaku256.pokemon-battle-memo"
