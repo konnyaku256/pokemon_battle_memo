@@ -42,10 +42,10 @@ class PokemonCard extends HookWidget {
           '',
           pokemonData?.abilities?.first.ability?.name ?? '',
           '',
-          pokemonData?.moves?.elementAt(0).move?.name ?? '',
-          pokemonData?.moves?.elementAt(1).move?.name ?? '',
-          pokemonData?.moves?.elementAt(2).move?.name ?? '',
-          pokemonData?.moves?.elementAt(3).move?.name ?? '');
+          '',
+          '',
+          '',
+          '');
       await setTmpPokemonBattleMemoJSON(
           pokemonListIndex, json.encode(pokemon.value.toJson()));
 
