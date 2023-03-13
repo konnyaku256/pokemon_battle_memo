@@ -1,6 +1,6 @@
 #include "Generated.xcconfig"
 
-FLUTTER_TARGET=lib/main_production.dart
+FLUTTER_TARGET=lib/main.dart
 ASSET_PREFIX=production
 BUNDLE_NAME=ばとめも
 BUNDLE_DISPLAY_NAME=ばとめも
