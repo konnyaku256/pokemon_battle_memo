@@ -61,24 +61,30 @@ class HomeDrawerScreen extends HookWidget {
           ListTile(
             leading: const Icon(Icons.mail),
             title: Text(l10n(context).contact),
+            onTap: () async {
+              await launchUrl(Uri.parse('https://forms.gle/TFnERUrPYhpARcEz5'),
+                  mode: LaunchMode.externalApplication);
+            },
           ),
           ListTile(
             leading: const Icon(Icons.privacy_tip),
             title: Text(l10n(context).privacy_policy),
-            // onTap: () {
-            //   Navigator.of(context).push(MaterialPageRoute(
-            //     builder: (context) => const PrivacyPolicyScreen(),
-            //   ));
-            // },
+            onTap: () async {
+              await launchUrl(
+                  Uri.parse(
+                      'https://pokemon-battle-memo.konnyaku256.dev/privacy-policy'),
+                  mode: LaunchMode.externalApplication);
+            },
           ),
           ListTile(
             leading: const Icon(Icons.article_rounded),
             title: Text(l10n(context).terms_of_service),
-            // onTap: () {
-            //   Navigator.of(context).push(MaterialPageRoute(
-            //     builder: (context) => const TermsAndConditionsScreen(),
-            //   ));
-            // },
+            onTap: () async {
+              await launchUrl(
+                  Uri.parse(
+                      'https://pokemon-battle-memo.konnyaku256.dev/terms-and-conditions'),
+                  mode: LaunchMode.externalApplication);
+            },
           ),
         ],
       ),
