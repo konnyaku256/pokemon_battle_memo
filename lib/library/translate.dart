@@ -28,6 +28,17 @@ Future<Map<String, List<List>>> initCsvMap() async {
   return csvMap;
 }
 
+List<String> initNameList(String csvName, String locale) {
+  final csvMap = GetIt.I<Map<String, List<List>>>();
+  final localeIndex =
+      csvMap[csvName]![0].indexWhere((column) => column == locale);
+  final nameList = <String>[];
+  for (List row in csvMap[csvName]!.sublist(1)) {
+    nameList.add(row[localeIndex]);
+  }
+  return nameList;
+}
+
 String translate(
     String csvName, String inputLocale, String inputText, String outputLocale) {
   final csvMap = GetIt.I<Map<String, List<List>>>();
